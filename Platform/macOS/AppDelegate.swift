@@ -17,10 +17,6 @@
 class AppDelegate: NSObject, NSApplicationDelegate {
     var data: UTMData?
     
-    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
-        true
-    }
-    
     func applicationShouldTerminate(_ sender: NSApplication) -> NSApplication.TerminateReply {
         guard let data = data else {
             return .terminateNow
